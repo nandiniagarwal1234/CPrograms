@@ -1,0 +1,27 @@
+//WAPC to check if a triangle is valid or not. If it is valid, check and print if it is isosceles, scalene or equilateral.
+#include<stdio.h>
+void main()
+{
+	float a,b,c;
+	scanf("%f %f %f", &a, &b, &c);
+	if(c>=a+b && b>=c+a && a>=b+c)
+	{
+		printf("Triangle can be formed.");
+	}
+	else
+	{
+		printf("Triangle cannot be formed.");
+	}
+	if(a==b || b==c || c==a)
+	{
+		printf("Triangle is isoceles.");
+	}
+	if(a==b && b==c)
+	{
+		printf("Triangle is equilateral.");
+	}
+	else
+	{
+		printf("Triangle is scalene.");
+	}
+}
