@@ -1,0 +1,25 @@
+//WAPC to input a positive integer. Check whether it is Automorphic or not. A number whose square ends with the number itself is an Automorphic number. Example: 25² = 625 (ends with 25)
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, square, digits, modulus;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    square = num * num;
+
+    // Count number of digits in the original number
+    digits = log10(num) + 1;
+
+    // Create modulus to extract last 'digits' from square
+    modulus = pow(10, digits);
+
+    if(square % modulus == num)
+        printf("%d is an Automorphic number.\n", num);
+    else
+        printf("%d is not an Automorphic number.\n", num);
+
+    return 0;
+}
