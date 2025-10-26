@@ -1,0 +1,21 @@
+//WAPC to check and print if a number is divisible by both 3 and 5.
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int a;
+    printf("Enter the number ");
+    scanf("%d", &a);
+    if (a%3==0)
+	{
+		if(a%5==0)
+     	{
+		printf("%d is divisible by 3 and 5.\n", a);
+    	}
+	}
+	else
+	{
+		printf("Not divisible by both 3 and 5.");
+	}
+    
+}
